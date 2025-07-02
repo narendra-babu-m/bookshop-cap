@@ -1,3 +1,8 @@
+// @sap/cds/common: This is a standard library provided by SAP containing common data types and aspects.
+// Currency: A predefined type for handling currency codes (like 'USD', 'EUR').
+// managed: An aspect that, when applied to an entity, automatically adds audit fields (like createdAt, createdBy, etc.).
+
+
 using { Currency, managed, sap } from '@sap/cds/common';
 namespace sap.capire.bookshop;
 
