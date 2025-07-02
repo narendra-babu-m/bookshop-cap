@@ -1,0 +1,129 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Books
+# @name Books_GET
+GET {{server}}/odata/v4/admin/Books
+Authorization: Basic {{username}}:{{password}}
+
+
+### Books
+# @name Books_POST
+POST {{server}}/odata/v4/admin/Books
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": 11969423,
+  "title": "title-11969423",
+  "descr": "descr-11969423",
+  "author": {
+    "ID": 20783088
+  },
+  "genre": {
+    "ID": 18401170
+  },
+  "stock": 60,
+  "price": 2759675.27,
+  "currency": {
+    "code": "209"
+  },
+  "createdAt": "2002-05-21T18:30:00.000Z",
+  "createdBy": "createdBy.74jnz@example.com",
+  "modifiedAt": "2006-09-30T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.74jnz@example.net"
+}
+
+
+### Books
+# @name Books_PATCH
+PATCH {{server}}/odata/v4/admin/Books/11969423
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": 11969423,
+  "title": "title-11969423",
+  "descr": "descr-11969423",
+  "author": {
+    "ID": 20783088
+  },
+  "genre": {
+    "ID": 18401170
+  },
+  "stock": 60,
+  "price": 2759675.27,
+  "currency": {
+    "code": "209"
+  },
+  "createdAt": "2002-05-21T18:30:00.000Z",
+  "createdBy": "createdBy.74jnz@example.com",
+  "modifiedAt": "2006-09-30T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.74jnz@example.net"
+}
+
+
+### Books
+# @name Books_DELETE
+DELETE {{server}}/odata/v4/admin/Books/11969423
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Authors
+# @name Authors_GET
+GET {{server}}/odata/v4/admin/Authors
+Authorization: Basic {{username}}:{{password}}
+
+
+### Authors
+# @name Authors_POST
+POST {{server}}/odata/v4/admin/Authors
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": 20783088,
+  "name": "name-20783088",
+  "createdAt": "2022-05-14T18:30:00.000Z",
+  "createdBy": "createdBy.cdgc0@example.org",
+  "modifiedAt": "2022-09-28T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.cdgc0@example.org"
+}
+
+
+### Authors
+# @name Authors_PATCH
+PATCH {{server}}/odata/v4/admin/Authors/20783088
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": 20783088,
+  "name": "name-20783088",
+  "createdAt": "2022-05-14T18:30:00.000Z",
+  "createdBy": "createdBy.cdgc0@example.org",
+  "modifiedAt": "2022-09-28T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.cdgc0@example.org"
+}
+
+
+### Authors
+# @name Authors_DELETE
+DELETE {{server}}/odata/v4/admin/Authors/20783088
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Genres
+# @name Genres_GET
+GET {{server}}/odata/v4/admin/Genres
+Authorization: Basic {{username}}:{{password}}
+
+
+### Currencies
+# @name Currencies_GET
+GET {{server}}/odata/v4/admin/Currencies
+Authorization: Basic {{username}}:{{password}}
